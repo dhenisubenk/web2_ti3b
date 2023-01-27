@@ -30,6 +30,7 @@ require_once 'config/koneksi.php';
                                 <a class="nav-link" href="index.php?page=about"> About</a>
                                 <a class="nav-link" href="index.php?page=galeri">Galeri</a>
                                 <a class="nav-link" href="index.php?page=mahasiswa">Mahasiswa</a>
+                                <a class="nav-link" href="index.php?page=user">User</a>
                                 <a class="nav-link" href="index.php?page=kontak"><i class="bi bi-envelope"></i> Contact</a>
                             </div>
                         </div>

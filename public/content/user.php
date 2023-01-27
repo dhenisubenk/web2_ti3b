@@ -1,34 +1,35 @@
 <div class="row">
     <div class="col-12">
-        <h4>Mahasiswa</h4>
+        <h4>User</h4>
         <!-- Button trigger modal -->
         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#form-mhs">
-            Tambah Mahasiswa
+            Tambah User
         </button>
         <table class="mt-2 table table-bordered table-hover">
             <thead class="bg-light">
                 <tr>
-                    <th>NIM</th>
-                    <th>Nama</th>
-                    <th>Jurusan</th>
-                    <th>Alamat</th>
+                    <th>No</th>
+                    <th>Username</th>
+                    <th>Level</th>
                     <th>Aksi</th>
                 </tr>
             </thead>
             <tbody>
                 <?php
-                $sql = $con->query("SELECT * FROM mahasiswa");
+                $no = 1;
+                $sql = $con->query("SELECT * FROM user");
                 while ($row = $sql->fetch()) {
                     echo "<tr>
-                            <td>$row[nim]</td>
-                            <td>$row[nama]</td>
-                            <td>$row[jurusan]</td>
-                            <td>$row[alamat]</td>
+                            <td>$no</td>
+                            <td>$row[username]</td>
+                            <td>$row[level]</td>
                             <td>
-                                <a href='index.php?page=mahasiswa_edit&nim=$row[nim]' class='btn btn-sm btn-warning'>Edit</a>
-                                <a href='index.php?page=mahasiswa_delete&nim=$row[nim]' onclick=\"return confirm('Delete Data?')\" class='btn btn-sm btn-danger'>Delete</a>
+                                <a href='' class='btn btn-sm btn-warning'>Edit</a>
+                                <a href='' onclick=\"return confirm('Delete Data?')\" class='btn btn-sm btn-danger'>Delete</a>
                             </td>
                         </tr>";
+
+                    $no++;
 
                     // delete -> get nim -> query delete where nim
                     // edit -> get nim -> select where nim -> show form -> update
@@ -46,26 +47,25 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h1 class="modal-title fs-5" id="exampleModalLabel">Tambah Mahasiswa</h1>
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Tambah User</h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <form action="index.php?page=mahasiswa_save" method="POST">
+                <form action="index.php?page=user_save" method="POST">
                     <div class="mb-3">
-                        <label class="form-label" for="">NIM</label>
-                        <input type="text" class="form-control" name="nim">
+                        <label class="form-label" for="">Username</label>
+                        <input type="text" class="form-control" name="username">
                     </div>
                     <div class="mb-3">
-                        <label class="form-label" for="">Nama</label>
-                        <input type="text" class="form-control" name="nama">
+                        <label class="form-label" for="">Password</label>
+                        <input type="text" class="form-control" name="password">
                     </div>
                     <div class="mb-3">
-                        <label class="form-label" for="">Jurusan</label>
-                        <input type="text" class="form-control" name="jurusan">
-                    </div>
-                    <div class="mb-3">
-                        <label class="form-label" for="">Alamat</label>
-                        <input type="text" class="form-control" name="alamat">
+                        <label class="form-label" for="">Level</label>
+                        <select name="level" class="form-select">
+                            <option>Admin</option>
+                            <option>User</option>
+                        </select>
                     </div>
                     <hr>
                     <div class="mb-3">

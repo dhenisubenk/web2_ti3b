@@ -2,7 +2,9 @@
     <div class="col-12">
         <div class="card">
             <div class="card-body">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit minus, ullam ducimus maiores dolorem ipsa rerum qui perferendis corporis pariatur delectus? Autem asperiores ipsa perferendis nesciunt eligendi tempora quam odio!
+                <div class="alert alert-info">
+                    Selamat Datang <strong><?= $user ?></strong>, Anda login menggunakan level <strong><?= $level; ?></strong>
+                </div>
             </div>
         </div>
     </div>

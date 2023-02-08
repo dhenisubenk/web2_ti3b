@@ -1,25 +1,27 @@
 <div class="row">
     <div class="col-12">
-        <h4>Mahasiswa</h4>
-        <!-- Button trigger modal -->
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#form-mhs">
-            Tambah Mahasiswa
-        </button>
-        <table class="mt-2 table table-bordered table-hover">
-            <thead class="bg-light">
-                <tr>
-                    <th>NIM</th>
-                    <th>Nama</th>
-                    <th>Jurusan</th>
-                    <th>Alamat</th>
-                    <th>Aksi</th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php
-                $sql = $con->query("SELECT * FROM mahasiswa");
-                while ($row = $sql->fetch()) {
-                    echo "<tr>
+        <div class="card">
+            <div class="card-body">
+                <h4>Mahasiswa</h4>
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#form-mhs">
+                    Tambah Mahasiswa
+                </button>
+                <table class="mt-2 table table-bordered table-hover">
+                    <thead class="bg-light">
+                        <tr>
+                            <th>NIM</th>
+                            <th>Nama</th>
+                            <th>Jurusan</th>
+                            <th>Alamat</th>
+                            <th>Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php
+                        $sql = $con->query("SELECT * FROM mahasiswa");
+                        while ($row = $sql->fetch()) {
+                            echo "<tr>
                             <td>$row[nim]</td>
                             <td>$row[nama]</td>
                             <td>$row[jurusan]</td>
@@ -30,12 +32,14 @@
                             </td>
                         </tr>";
 
-                    // delete -> get nim -> query delete where nim
-                    // edit -> get nim -> select where nim -> show form -> update
-                }
-                ?>
-            </tbody>
-        </table>
+                            // delete -> get nim -> query delete where nim
+                            // edit -> get nim -> select where nim -> show form -> update
+                        }
+                        ?>
+                    </tbody>
+                </table>
+            </div>
+        </div>
     </div>
 </div>
 

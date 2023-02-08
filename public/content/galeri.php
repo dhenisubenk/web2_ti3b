@@ -1,32 +1,36 @@
 <div class="row">
     <div class="col-12">
-        <h4>Galeri</h4>
-        <!-- Button trigger modal -->
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addGaleri">
-            Tambah Galeri
-        </button>
-        <table class="mt-2 table table-bordered table-hover">
-            <thead class="bg-light">
-                <tr>
-                    <th>#</th>
-                    <th>Keterangan</th>
-                    <th>Aksi</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>Pantai</td>
-                    <td>
-                    </td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Pantai</td>
-                    <td></td>
-                </tr>
-            </tbody>
-        </table>
+        <div class="card">
+            <div class="card-body">
+                <h5>Galeri</h5>
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addGaleri">
+                    Tambah Galeri
+                </button>
+                <table class="mt-2 table table-bordered table-hover">
+                    <thead class="bg-light">
+                        <tr>
+                            <th>#</th>
+                            <th>Keterangan</th>
+                            <th>Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Pantai</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Pantai</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
     </div>
 </div>
 
